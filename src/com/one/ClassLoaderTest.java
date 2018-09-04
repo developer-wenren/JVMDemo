@@ -2,12 +2,14 @@ package com.one;
 
 import java.io.InputStream;
 
-/*
-- 类加载器对instanceof的影响
-不同加载器加载同一个类,导致有两个类名相同,但本质不同的类,用
-instanceof 就可以区分
-- Coding By One ON 09/03
-*/
+/**
+ * - 类加载器对instanceof的影响
+ * 不同加载器加载同一个类,导致有两个类名相同,但本质不同的类,用
+ * instanceof 就可以区分
+ * - Coding By One ON 09/03
+ *
+ * @author One
+ */
 public class ClassLoaderTest {
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
         ClassLoader myLoader = new ClassLoader() {
