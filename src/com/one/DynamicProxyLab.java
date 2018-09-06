@@ -11,6 +11,9 @@ import java.lang.reflect.Proxy;
 */
 public class DynamicProxyLab {
     interface IHello {
+        /**
+         * da
+         */
         void sayHello();
     }
 
@@ -34,6 +37,7 @@ public class DynamicProxyLab {
     }
 
     public static void main(String[] args) {
+        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
         DynamicHelloProxy dynamicHelloProxy = new DynamicHelloProxy();
         IHello iHello = new IHelloImpl();
         IHello proxy = (IHello) dynamicHelloProxy.getProxy(iHello);
